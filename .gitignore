@@ -1,0 +1,10 @@
+# IDE
+.idea
+
+# Dependencies
+node_modules
+yarn.lock
+
+# Bundle
+dist
+.parcel-cache
