@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="A straightforward web application that lets users add and remove jobs from a list.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-Do List</title>
+	<meta charset='UTF-8'>
+	<meta name='description' content='A straightforward web application that lets users add and remove jobs from a list.'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+	<link href='https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap'
+				rel='stylesheet'>
+	<link rel='stylesheet'
+				href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0'/>
+	<link rel='stylesheet' href='src/styles/index.css'>
+	<title>To-Do List</title>
 </head>
 <body>
-    <p>Hello World!</p>
+<main class="container">
+	<form class="form">
+		<label for="form_input" hidden="hidden"></label>
+		<input id="form_input" class="form__control" type="text" placeholder="What needs to be done?">
+		<button id="form_button" class="form__action" type="submit">
+			<label for="form_button" class="form__label-action material-symbols-outlined">add</label>
+		</button>
+	</form>
+	<section class="list">
+		<div class="list__header">
+			<p><span id="todo_list_length">1</span> Item(s) left</p>
+			<div class="tab-menu">
+				<button id="all_todo_button" class="tab-menu__button tab-menu__button--active" type="button">
+					<label for="all_todo_button" class="tab-menu__button-label">All</label>
+				</button>
+				<button id="active_todo_button" class="tab-menu__button" type="button">
+					<label for="active_todo_button" class="tab-menu__button-label">Active</label>
+				</button>
+				<button id="completed_todo_button" class="tab-menu__button" type="button">
+					<label for="completed_todo_button" class="tab-menu__button-label">Completed</label>
+				</button>
+			</div>
+		</div>
+		<div class="list__container">
+			<div class="todo-item">
+				<p id="todo_item_1">Meeting with the boss</p>
+				<button id="todo_item_1_delete_button" class="todo-item__action">
+					<label for="todo_item_1_delete_button"
+								 class="todo-item__label-action material-symbols-outlined">delete</label>
+				</button>
+			</div>
+			<div class="todo-item todo-item--completed">
+				<p id="todo_item_2">Meeting with the boss</p>
+				<button id="todo_item_2_delete_button" class="todo-item__action">
+					<label for="todo_item_2_delete_button"
+								 class="todo-item__label-action material-symbols-outlined">delete</label>
+				</button>
+			</div>
+		</div>
+	</section>
+</main>
 </body>
 </html>
