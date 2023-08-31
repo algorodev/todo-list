@@ -15,16 +15,16 @@
 </head>
 <body>
 <main class="container">
-	<form class="form">
+	<form id="todo_form" class="form">
 		<label for="form_input" hidden="hidden"></label>
 		<input id="form_input" class="form__control" type="text" placeholder="What needs to be done?">
-		<button id="form_button" class="form__action" type="submit">
+		<button id="form_button" class="form__action" type="button">
 			<label for="form_button" class="form__label-action material-symbols-outlined">add</label>
 		</button>
 	</form>
 	<section class="list">
 		<div class="list__header">
-			<p><span id="todo_list_length">1</span> Item(s) left</p>
+			<p><span id="todo_list_length">0</span> Item(s) left</p>
 			<div class="tab-menu">
 				<button id="all_todo_button" class="tab-menu__button tab-menu__button--active" type="button">
 					<label for="all_todo_button" class="tab-menu__button-label">All</label>
@@ -37,23 +37,9 @@
 				</button>
 			</div>
 		</div>
-		<div class="list__container">
-			<div class="todo-item">
-				<p id="todo_item_1">Meeting with the boss</p>
-				<button id="todo_item_1_delete_button" class="todo-item__action">
-					<label for="todo_item_1_delete_button"
-								 class="todo-item__label-action material-symbols-outlined">delete</label>
-				</button>
-			</div>
-			<div class="todo-item todo-item--completed">
-				<p id="todo_item_2">Meeting with the boss</p>
-				<button id="todo_item_2_delete_button" class="todo-item__action">
-					<label for="todo_item_2_delete_button"
-								 class="todo-item__label-action material-symbols-outlined">delete</label>
-				</button>
-			</div>
-		</div>
+		<div id="list_container" class="list__container"></div>
 	</section>
 </main>
+<script type="module" src="src/app.js"></script>
 </body>
 </html>
